@@ -1,0 +1,17 @@
+<div>
+    <table>
+        <tr>
+            <td>nama siswa</td>
+            <td>nis siswa</td>
+            <td>alamat</td>
+            <td>tgl_lhr</td>
+        </tr>
+        <tr ng-repeat="dn in data.data">
+            <td>{{dn.nama}}</td>
+            <td>{{dn.nis}}</td>
+            <td>{{dn.alamat}}</td>
+            <td>{{dn.tgl_lahir}}</td>
+            <td><button ng-click="delete(dn.nis);">Delete data</button></td>
+        </tr>
+    </table>
+</div>

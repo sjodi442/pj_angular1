@@ -1,0 +1,24 @@
+<!-- form input -->
+<div>
+    <form>
+        nama : <input type="text" id="nama" name="nama" ng-model="databaru.nama"><br />
+        alamat: <input type="text" id="alamat" name="alamat" ng-model="databaru.alamat"><br />
+        tgl_lahir: <input type="date" id="tgl_lahir" name="tgl_lahir" ng-model="databaru.tgl_lahir"><br />
+        nis : <input type="text" id="nis" name="nis" ng-model="databaru.nis"><br />
+        <button id="input" ng-click="inputdata()">submit</button> 
+        <button id="update" ng-click="update()" style="display: none">update</button> 
+        <input type="reset" id="reset" value="clear"><br />
+    </form>
+</div>
+<!-- tampil data list -->
+<div>
+    <ul>
+        <li ng-repeat="dn in data.data">
+            nama: {{dn.nama}} <br />
+            tgl_lhr: {{dn.tgl_lahir | date: 'yyyy-MM-dd'}}<br />
+            alamat: {{dn.alamat}}<br />
+            nis: {{dn.nis}} <br />
+            <button ng-click="edit(dn.nis, dn.nama, dn.alamat, dn.tgl_lahir);">Edit</button></td>
+        </li>
+    </ul>
+</div>
